@@ -36,6 +36,10 @@ $(document).ready(function() {
         let myPizza = new Pizza(sizeInput, toppingArray);
         let price = myPizza.getPrice();
 
+        console.log(price);
+        console.log(sizeInput);
+        console.log(toppingsInput);
+
         $("#price") = "";
         $("#price").text(price);
   })
