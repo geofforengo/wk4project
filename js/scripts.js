@@ -29,9 +29,9 @@ $(document).ready(function() {
 
       let toppingArray = [];
       let toppingsInput = $("input:checkbox[name=toppings]:checked");
-      let sizeInput = parseInt($("input:radio[name=size]:checked").val());
-        toppingsInput.forEach(function(toppingInput) {
-          toppingArray.push(toppingInput.val());
+      let sizeInput = $("input:radio[name=size]:checked").val();
+      toppingsInput.forEach(function(toppingInput) {
+        toppingArray.push(toppingInput.val());
         })
         let myPizza = new Pizza(sizeInput, toppingArray);
         let price = myPizza.getPrice();
