@@ -24,12 +24,12 @@ Pizza.prototype.getPrice = function() {
 
 //User Interface Logic
 $(document).ready(function() {
-  $("#choices").submit(function(event) {
+  $("form#choices").submit(function(event) {
       event.preventDefault;
 
       let toppingArray = [];
-      let toppingsInput = $("#choices: checked");
-      let sizeInput = parseInt($("#choices: checked"));
+      let toppingsInput = $("input:checkbox[name=toppings]:checked");
+      let sizeInput = parseInt($("input:radio[name=size]:checked").val());
         toppingsInput.forEach(function(toppingInput) {
           toppingArray.push(toppingInput.val());
         })
@@ -40,7 +40,7 @@ $(document).ready(function() {
         console.log(sizeInput);
         console.log(toppingsInput);
 
-        $("#price") = "";
+
         $("#price").text(price);
   })
 });
