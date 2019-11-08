@@ -12,5 +12,42 @@
       <h2>Welcome to the Basic Pizza Company</h2>
       <p>We don't make the fanciest pizzas but we do make pizzas well!</p>
     </div>
+    <div class="container">
+      <form id="choices">
+        <div class="container">
+          <h3>Choose a size to start:</h3>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="10">
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="14">
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="18">
+            </label>
+          </div>
+        </div>
+        <div class="container">
+          <h3>Now choose your toppings:</h3>
+          <select class="form-control" name="toppings">
+            <option value="Cheese">Cheese</option>
+            <option value="Sausage">Sausage</option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Onions">Onions</option>
+            <option value="Peppers">Peppers</option>
+            <option value="Mushrooms">Mushrooms</option>
+            <option value="Olives">Olives</option>
+          </select>
+        </div>
+      </form>
+      <div id="result">
+        <h4>The cost of your pizza is: $<span id="price"></span></h4>
+      </div>
+    </div>
   </body>
 </html>
