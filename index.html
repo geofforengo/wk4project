@@ -12,8 +12,8 @@
       <h2>Welcome to the Basic Pizza Company</h2>
       <p>We don't make the fanciest pizzas but we do make pizzas well!</p>
     </div>
-    <div class="container">
-      <form id="choices">
+    <!-- <div class="container"> -->
+      <form class="form-group" id="choices">
         <!-- <div class="container"> -->
           <h3>Choose a size to start:</h3>
           <div class="radio">
@@ -37,7 +37,7 @@
         <!-- </div> -->
         <!-- <div class="container"> -->
           <h3>Now choose your toppings:</h3>
-          <form method="post" id="choices2">
+
             <input type="checkbox" name="toppings" value="Cheese">Cheese<br>
             <input type="checkbox" name="toppings" value="Sausage">Sausage<br>
             <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
@@ -45,13 +45,14 @@
             <input type="checkbox" name="toppings" value="Peppers">Peppers<br>
             <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
             <input type="checkbox" name="toppings" value="Olives">Olives<br>
-          </form>
+
+
         <!-- </div> -->
-        <button type="submit" name="button">Place your order!</button>
+        <button type="submit">Place your order!</button>
       </form>
       <div id="result">
-        <h4>The cost of your pizza is: $<span id="price"> </span></h4>
+        <h4>The cost of your pizza is: $</h4><span id="price"> </span>
       </div>
-    </div>
+    <!-- </div> -->
   </body>
 </html>

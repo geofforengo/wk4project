@@ -24,14 +24,14 @@ Pizza.prototype.getPrice = function() {
 
 //User Interface Logic
 $(document).ready(function() {
-  $("form#choices,#choices2").submit(function(event) {
+  $("form#choices").submit(function(event) {
       event.preventDefault;
 
-      let toppingArray = [];
       let toppingsInput = $("input:checkbox[name=toppings]:checked");
+      let toppingArray = [];
       let sizeInput = $("input:radio[name=size]:checked").val();
-      toppingsInput.forEach(function(toppingInput) {
-        toppingArray.push(toppingInput.val());
+        toppingsInput.forEach(function(toppingInput) {
+          toppingArray.push(toppingInput.val());
       })
       let myPizza = new Pizza(sizeInput, toppingArray);
       let price = myPizza.getPrice();
