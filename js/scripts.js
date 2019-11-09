@@ -20,20 +20,23 @@ Pizza.prototype.getPrice = function() {
     this.price += 12;
   }
   return this.price;
-}
+  }
 
 //User Interface Logic
 $(document).ready(function() {
   $("form#choices").submit(function(event) {
       event.preventDefault;
 
+
       let toppingsInput = $("input:checkbox[name=toppings]:checked");
       let toppingArray = [];
-      let sizeInput = $("input:radio[name=size]:checked").val();
-        toppingsInput.forEach(function(toppingInput) {
-          toppingArray.push(toppingInput.val());
-      })
-      let myPizza = new Pizza(sizeInput, toppingArray);
+      let size = parseInt($("input:radio[name=size]:checked").val());
+      //   toppingsInput.forEach(myFunction(toppingInput)) {
+      //     function myFunction {
+      //       toppingArray.push(toppingInput.val());
+      //     }
+      // })
+      let myPizza = new Pizza(size, toppingArray);
       let price = myPizza.getPrice();
 
       console.log(price);
